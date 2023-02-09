@@ -1,18 +1,14 @@
 
 body {
-    display: block;
-    position: relative;
     margin: 0;
+    padding: 0;
     min-height: 100vh;
-    height: fit-content;
-    z-index: -9999;
+    display: flex;
+    flex-direction: column;
 }
 
 .all-content {
-    display: block;
-    position: relative;
-    padding-bottom: 12vw;
-    z-index: -99999;
+    flex-grow: 1;
 }
 
 .content {
@@ -35,6 +31,7 @@ Nav bar
 }
 
 .header {
+    position: absolute;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -163,7 +160,6 @@ Landing image and text overlay
 .landing-image-container {
    display: block;
    position: relative;
-   top: -53px;
    left: 0;
    width: 100%;
    height: auto;
@@ -201,7 +197,7 @@ Main content start
 .featured {
     display: block;
     position: relative;
-    height: 10px;
+    height: 400px;
 }
 
 
@@ -210,8 +206,6 @@ Footer
 */
 
 .footer-group {
-    display: block;
-   position: absolute;
    bottom: 0;
    left: 0;
    width: 100%;
@@ -235,6 +229,7 @@ Footer
     height: 30px;
     width: 100%;
     background-color: #474747;
+    filter: drop-shadow(2px 4px 6px black);
 }
 
 .footer-nav-list {
@@ -268,6 +263,7 @@ Media query 768-1280px
     }
 
     .header {
+        position: absolute;
        filter:drop-shadow(0px 3px 3px black);
        }
 
@@ -285,9 +281,6 @@ Media query 768-1280px
         font-size: 28px;
     }
 
-    .landing-image-container {
-        top: -33px;
-    }
 }
 
 /*
@@ -303,6 +296,7 @@ Media query 768-1280px
 }
 
 .header {
+    position: relative;
     background: rgba(128,128,128);
     filter:drop-shadow(0px 3px 3px black);
     }
@@ -360,11 +354,7 @@ li.nav-item-left a:hover,li.nav-item-right a:hover {
 MOBILE content
 */
 
-.landing-image-container {
-    margin-top: 50px;
-}
 
-}
 /*
 BIG SCREEN 4K
 */
