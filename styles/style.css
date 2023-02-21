@@ -24,7 +24,7 @@ Nav bar
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -183px;
+    margin-left: -120px;
     object-fit: scale-down;
     height: 90px;
 }
@@ -162,7 +162,6 @@ Landing image and text overlay
    left: 0;
    width: 100%;
    height: auto;
-   max-height: 100vh;
    z-index: -99999;
    overflow: hidden;
 }
@@ -248,6 +247,76 @@ h1 {
 
 }
 
+.mail {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.shipping-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%
+}
+.shipping-text {
+    display: flex;
+    align-items: center;
+    max-width: 1260px;
+    height: auto;
+    margin-top: 30px;
+    font-family: 'poppins';
+    font-size: 18px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    width: 280px;
+    font-family: 'poppins';
+    font-size: 18px;
+}
+
+/*
+Events Page
+*/
+
+.event-image-container {
+    display: block;
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    z-index: -99999;
+    overflow: hidden;
+ }
+
+.event-bg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.event-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 60%;
+    margin: 10% 35% 10% 35%;
+    top: 0;
+    font-family: 'poppins';
+    font-size: 18px;
+    background: rgba(255,255,255,0.7);
+}
+
 /*
 Footer
 */
@@ -328,6 +397,15 @@ Media query 768-1280px
         font-size: 28px;
     }
 
+/*
+Events small screens
+*/
+
+.event-list {
+    width: 50%;
+    margin: 10% 25% 10% 25%;
+}
+
 }
 
 /*
@@ -406,16 +484,46 @@ MOBILE content
     gap: 0;
 }
 
+/*
+Events Mobile
+*/
+
+.event-list {
+    width: 100%;
+    margin: 10% 0 10% 0;
+    padding: 0 10px 0 10px;
+    font-size: 14px;
 }
+
+}
+
+/*
+2k BG image ratio fix
+*/
+
+@media (width: 2560px) {
+
+.landing-image {
+    width: 112%;
+}
+    
+.event-bg {
+    width: 112%;
+}
+
+}
+
+
 /*
 BIG SCREEN 4K
 */
 
-@media (min-width: 2561px) {
+@media (min-width: 2560px) {
 
 .featured {
     padding: 0 500px 0 500px;
 }
+    
 
 .product-name {
     font-size: 24px;
@@ -429,5 +537,24 @@ BIG SCREEN 4K
     font-size: 24px;
 }
 
+.event-list {
+    font-size: 28px;
+}
+
+}
+
+/*
+4k BG image ratio fix
+*/
+
+@media (width: 3840px) {
+
+.landing-image {
+    width: 101%;
+}
+        
+.event-bg {
+    width: 101%;
+}
 
 }
